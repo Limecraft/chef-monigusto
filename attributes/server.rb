@@ -39,7 +39,7 @@ override['graphite']['graphite_web']['http_port'] = node['monigusto']['port']['g
 override['graphite']['graphite_web']['additional_vhost_config'] = "Header set Access-Control-Allow-Origin '*' \n\t\tHeader set Access-Control-Allow-Methods 'GET, OPTIONS' \n\t\tHeader set Access-Control-Allow-Headers 'origin, authorization, accept'"
 
 # Apache
-override['apache']['listen_ports'] = [ 80, 443,
+override['apache']['listen_ports'] = [ 80, 443, 8085,
             node['monigusto']['port']['nagios'],
             node['monigusto']['port']['graphite_web'],
             node['monigusto']['port']['collectd_web'],
